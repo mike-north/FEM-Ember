@@ -1,8 +1,8 @@
-<h1>Facebook repos</h1>
+<h1>{{org.id}} repos</h1>
+
 <ul>
-  <li>{{link-to 'watchman' 'org.repo' 'watchman'}}</li>
-  <li>{{link-to 'react' 'org.repo' 'react' }}</li>
-  <li>{{link-to 'react-native' 'org.repo' 'react-native'}}</li>
-  <li>{{link-to 'relay' 'org.repo' 'relay'}}</li>
+  {{#each content as |repo|}}
+  <li>{{link-to repo.name 'org.repo' repo.name}}</li>
+  {{/each}}
 </ul>
 {{outlet}}

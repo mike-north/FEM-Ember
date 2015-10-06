@@ -1,3 +1,9 @@
 {{link-to 'Issues' 'org.repo.issues'}} {{link-to 'Contributors' 'org.repo.contributors'}}
-<h3>Contributors</h3>
+
+<ul>
+  {{#each content as |contributor|}}
+    <li>{{contributor.login}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}
