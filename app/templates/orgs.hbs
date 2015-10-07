@@ -2,7 +2,8 @@
 
 <ul>
   {{#each content as |org|}}
-    <li><span {{action 'addOrgToFavorites' org}}>[Favorite]</span> {{link-to org.id 'org' org}}</li>
+    {{github-org org=org
+      on-favorite-click='addOrgToFavorites'}}
   {{/each}}
 </ul>
 {{outlet}}

@@ -2,7 +2,7 @@
 
 <ul>
   {{#each content as |repo|}}
-  <li>{{link-to repo.name 'org.repo' repo.name}}</li>
+    {{github-repo repo=repo}}
   {{/each}}
 </ul>
 {{outlet}}
